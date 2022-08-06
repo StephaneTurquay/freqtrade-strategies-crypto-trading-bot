@@ -1,0 +1,66 @@
+{
+    "bot_name": "Bot Name",
+    "strategy": "Strategy Name",
+    "dry_run": true,
+    "max_open_trades" : 6,
+    "available_capital": 425,
+    "stake_currency": "USDT",
+    "fiat_display_currency": "USD",
+    "stake_amount": "unlimited",
+    "trading_mode": "spot",
+    "amend_last_stake_amount": true,
+    "cancel_open_orders_on_exit": false,
+    "process_only_new_candles": true,
+
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+
+    "entry_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+
+    "exit_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0
+    },
+
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "limit",
+        "force_entry": "limit",
+        "force_exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false
+    },
+
+    "order_time_in_force": {
+        "entry": "gtc",
+        "exit": "gtc"
+    },
+
+    "initial_state": "running",
+    "force_entry_enable": true,
+    "internals": {
+        "process_throttle_secs": 5,
+        "heartbeat_interval": 30
+    },
+    "add_config_files": [
+        "config-private.json",
+        "blacklist-binance.json",
+        "pairlist-volume-binance-usdt.json"
+    ]
+}

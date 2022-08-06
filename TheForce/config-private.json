@@ -1,0 +1,31 @@
+{
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config" : {
+
+        },
+        "markets_refresh_interval": 30,
+        "log_responses": true
+    },
+
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": "",
+        "reload": true
+    },
+
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "something-random",
+        "CORS_origins": [],
+        "username": "",
+        "password": ""
+    }
+}
