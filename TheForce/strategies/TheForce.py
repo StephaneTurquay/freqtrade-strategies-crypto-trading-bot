@@ -14,6 +14,7 @@ class TheForce(IStrategy):
   
     INTERFACE_VERSION = 3
 
+    #ROI Table
     minimal_roi = {
         "30": 0.005,
         "15": 0.01,
@@ -22,7 +23,7 @@ class TheForce(IStrategy):
 
     stoploss = -0.015
 
-    # Trailing stoploss
+    # Trailing stoploss (not used)
     trailing_stop = False
     # trailing_only_offset_is_reached = False
     # trailing_stop_positive = 0.01
@@ -56,23 +57,6 @@ class TheForce(IStrategy):
         'exit': 'gtc'
     }
     
-    plot_config = {
-        # Main plot indicators (Moving averages, ...)
-        'main_plot': {
-            'tema': {},
-            'sar': {'color': 'white'},
-        },
-        'subplots': {
-            # Subplots - each dict defines one additional plot
-            "MACD": {
-                'macd': {'color': 'blue'},
-                'macdsignal': {'color': 'orange'},
-            },
-            "RSI": {
-                'rsi': {'color': 'red'},
-            }
-        }
-    }
     def informative_pairs(self):
         """
         Define additional, informative pair/interval combinations to be cached from the exchange.
