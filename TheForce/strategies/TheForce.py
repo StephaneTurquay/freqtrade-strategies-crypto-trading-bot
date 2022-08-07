@@ -12,7 +12,7 @@ import freqtrade.vendor.qtpylib.indicators as qtpylib
 
 class TheForce(IStrategy):
   
-    INTERFACE_VERSION = 2
+    INTERFACE_VERSION = 3
 
     minimal_roi = {
         "30": 0.005,
@@ -125,7 +125,7 @@ class TheForce(IStrategy):
 
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) :
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) :
         """
         Based on TA indicators, populates the buy signal for the given dataframe
         :param dataframe: DataFrame populated with indicators
@@ -154,11 +154,11 @@ class TheForce(IStrategy):
                     (dataframe['ema5c'] >= dataframe['ema5o'])
                 )
             ),
-            'buy'] = 1
+            'enter_long'] = 1
 
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) :
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) :
         """
         Based on TA indicators, populates the sell signal for the given dataframe
         :param dataframe: DataFrame populated with indicators
@@ -184,5 +184,5 @@ class TheForce(IStrategy):
                 )
                 
             ),
-            'sell'] = 1
+            'exit_long'] = 1
         return dataframe
