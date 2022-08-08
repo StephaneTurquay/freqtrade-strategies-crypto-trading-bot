@@ -4,7 +4,7 @@ This strategy is for educational and entertainment purposes only. Use this strat
 
 **General recommendation:** Use this strategy for backtesting purposes or in dry-run mode which doesn't engage any money.
 
-# 🔬 The Force Strategy 🧑‍🔬 #
+# 🔬 The Force Strategy (Not profitable) 🧑‍🔬 #
 
 ## Indicators ##
 
