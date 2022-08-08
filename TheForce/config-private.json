@@ -4,7 +4,7 @@
         "key": "",
         "secret": "",
         "ccxt_config" : {
-
+            "enableRateLimit": true
         },
         "markets_refresh_interval": 30,
         "log_responses": true
